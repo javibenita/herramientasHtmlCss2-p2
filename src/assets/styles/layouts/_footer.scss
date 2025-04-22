@@ -1,0 +1,40 @@
+.footer {
+  /*background-color: $secondary-background-color;*/
+  margin-top: 1.5rem;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid $primary;
+    padding-bottom: 2rem;
+  }
+
+  &__logo-img {
+    height: 50px;
+  }
+
+  &__nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+
+    li a {
+      text-decoration: none;
+      color: $primary;
+      font-weight: 600;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

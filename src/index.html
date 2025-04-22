@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jornadas de Economía Circular 2025</title>
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+</head>
+
+<body>
+
+  <include src="./views/header.html"></include>
+
+  <main class="poster">
+    <div class="container poster__container">
+
+      <h1 class="poster__title">Jornadas de Economía Circular</h1>
+      <div class="poster__idea poster__topidea"><i class="poster__idea-i fa-solid fa-brain"></i>
+        <span>Repensar</span>
+      </div>
+      <div class="poster__idea poster__rightidea"><i class="poster__idea-i fa-solid fa-minimize"></i>
+        <span>Reducir</span>
+      </div>
+      <div class="poster__centeridea"><i class="poster__idea-i fa-solid fa-arrows-spin"></i></div>
+      <div class="poster__idea poster__bottomidea">
+        <span>Reutilizar</span>
+        <i class="poster__idea-i fa-solid fa-people-arrows"></i>
+      </div>
+      <div class="poster__idea poster__leftidea">
+        <span>Recircular</span>
+        <i class="poster__idea-i fa-solid fa-recycle"></i>
+      </div>
+      <img class="poster__image" src="assets/images/home.png" alt="Ilustración abstracta sobre economía circular" />
+      <div class="poster__text">
+        <p>
+          Descubre cómo la economía circular está transformando el futuro hacia un modelo más sostenible, eficiente y
+          responsable con el planeta. Estas jornadas te invitan a reflexionar sobre nuevas formas de producir, consumir
+          y reutilizar los recursos, con el objetivo de reducir el impacto ambiental y fomentar la innovación social y
+          tecnológica.<br />
+          Te esperamos para compartir experiencias, casos de éxito y propuestas transformadoras que están marcando la
+          diferencia en sectores clave.
+        </p>
+        <div class="poster__join">
+          <button type="button" class="btn btn-primary">Quiero inscribirme</button>
+        </div>
+      </div>
+
+      <h2 class="poster__subtitle">2025 - Cádiz, del 1 al 10 de abril</h2>
     </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+  </main>
+
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
 </html>

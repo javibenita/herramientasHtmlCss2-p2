@@ -1,12 +1,50 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+/*$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+$font-family-serif: "Georgia", "Times New Roman", serif;*/
 
-$uoc-corporate: #000078;
+$primary: #0b2f3a;
+$secondary: color.scale($primary, $lightness: +30%);
+$primary-bg: color.scale($primary, $lightness: +40%);
+$secondary-bg: color.scale($primary, $lightness: +70%);
+$tertiary-bg: color.scale($primary, $lightness: +90%);
+
+/*se sobreescriben los valores de bootstrap*/
+$body-bg: color.scale($primary, $lightness: +40%);
+$body-color: $primary;
+
+$card-spacer-y: 1.5rem;
+$card-spacer-x: 1.5rem;
+/*$card-title-spacer-y: 0.5rem;*/
+$card-title-color: $primary;
+$card-subtitle-color: $secondary;
+
+/*$font-size-base: 1rem;*/
+$font-family-sans-serif: "Arial", sans-serif;
+
+/*$success: #fabada;
+$info: #fabada;
+$warning: #fabada;
+$danger: #fabada;*/
+/*$theme-colors: (
+  "primary": #fabada // pon el código de color que prefieras,,,,,,,,,,,,,,,
+);*/
+
+/*$uoc-corporate: #000078;
 $uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);*/
 
-$mqMinWidth: 420px;
+/*$mqMinWidth: 420px;*/
+/*
+$primary-color: #0b2f3a; / *#0b2f3a;* /
+$secondary-color: color.scale($primary-color, $lightness: -40%);
+$primary-background-color: color.scale($primary-color, $lightness: +40%);
+$secondary-background-color: color.scale($primary-color, $lightness: +60%);
+$tertiary-background-color: color.scale($primary-color, $lightness: +80%);
+$text-color: $primary-color;
+$alt-text-color: color.scale($primary-color, $lightness: +80%);
+$link-color: $secondary-color;
+$link-hover-color: color.scale($link-color, $lightness: -40%);
+$font-stack: "Arial", sans-serif;*/
