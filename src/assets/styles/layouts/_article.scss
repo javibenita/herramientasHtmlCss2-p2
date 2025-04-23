@@ -1,0 +1,139 @@
+.article {
+  background-color: $secondary-bg;
+  padding: 2rem 0 2rem;
+
+  &__header {
+    position: relative;
+
+    .article__image {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 50vh;
+      object-fit: cover;
+    }
+
+    .article__overlay {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      background: rgba($primary, 0.5);
+      color: $light;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      max-width: 90%;
+      white-space: nowrap;
+    }
+
+    .article__title {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .article__author {
+      font-size: 1rem;
+      opacity: 0.8;
+      position: absolute;
+      margin: 0;
+      bottom: 0.5rem;
+      right: 1rem;
+      color: $light;
+    }
+  }
+
+  &__intro {
+    margin-top: 2rem;
+
+    .text-large {
+      font-size: 1.25rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__list {
+    margin: 2rem 0;
+
+    .article__steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .article__step {
+      /*display: flex;
+      align-items: flex-start;
+      gap: 1rem;*/
+
+      &-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.25rem;
+      }
+
+      &-number {
+        flex-shrink: 0;
+        width: 2rem;
+        height: 2rem;
+        background-color: #0d6efd;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+
+      &-title {
+        display: block;
+      }
+
+      &-text {
+        margin-left: calc(2rem + 1rem);
+        /*text-indent: 1rem;*/
+      }
+    }
+  }
+
+  &__content {
+    margin-bottom: 2rem;
+
+    .text-large {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__figure {
+    margin-bottom: 2rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__footer {
+    p {
+      font-style: italic;
+    }
+  }
+
+  // Pseudoclases modernas
+  // Añade un borde si el bloque contiene un blockquote
+  &:has(blockquote) {
+    border-left: 4px solid #0d6efd;
+    padding-left: 1rem;
+  }
+
+  // Estilo común para encabezados dentro de la sección de contenido
+  .article__content :is(h2, h3, h4) {
+    color: #0d6efd;
+    margin-top: 1.5rem;
+  }
+}
