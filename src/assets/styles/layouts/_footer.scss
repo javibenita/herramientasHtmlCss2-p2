@@ -28,12 +28,27 @@
 
     li a {
       text-decoration: none;
-      color: $primary;
       font-weight: 600;
       transition: color 0.3s ease;
 
       &:hover {
-        color: $primary;
+        color: $secondary;
+      }
+    }
+  }
+
+  &__social-list {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+
+    li a {
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $secondary;
       }
     }
   }

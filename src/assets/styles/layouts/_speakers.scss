@@ -1,5 +1,5 @@
 .speakers {
-  background-color: $secondary-bg;
+  /*background-color: $secondary-bg-1;*/
   padding: 2rem 0 2rem;
 
   &__intro {
@@ -20,7 +20,7 @@
     color: #555;
     max-width: 700px;
     margin: 0 auto;*/
-    background-color: $tertiary-bg;
+    background-color: $primary-bg-3;
     text-align: center;
     border-radius: 15px;
     padding: 1rem;
@@ -39,7 +39,7 @@
   max-width: calc(25% - 2rem);
   /*display: flex;*/
   /*flex-direction: column;*/
-  background-color: $tertiary-bg;
+  background-color: $primary-bg-3;
   /*border: 1px solid #ddd;*/
   /*border-radius: 0.5rem;*/
   /*overflow: hidden;*/

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jornadas de Economía Circular 2025 - Inscripción</title>
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+</head>
+
+<body>
+
+  <include src="./views/header.html"></include>
+
+  <main class="registration">
+    <section class="registration__container container">
+      <h1 class="registration__title">Formulario de inscripción</h1>
+      <p class="registration__intro">Rellena el siguiente formulario para asistir a las jornadas de economía circular.
+      </p>
+
+      <form class="registration__form">
+        <div>
+          <label for="nombre" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" required />
+        </div>
+
+        <div>
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" required />
+        </div>
+
+        <div>
+          <label for="telefono" class="form-label">Teléfono de contacto</label>
+          <input type="tel" class="form-control" id="telefono" />
+        </div>
+
+        <div>
+          <label for="profesion" class="form-label">Profesión o área de interés</label>
+          <input type="text" class="form-control" id="profesion" />
+        </div>
+
+        <div>
+          <label for="comentarios" class="form-label">Comentarios adicionales</label>
+          <textarea class="form-control" id="comentarios" rows="4"></textarea>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="acepto" required />
+          <label class="form-check-label" for="acepto">
+            Acepto la política de privacidad y el tratamiento de mis datos personales.
+          </label>
+        </div>
+
+        <div>
+          <label class="form-label">No soy un robot: Seleccione los elementos de color <strong
+              id="captchaColorTarget"></strong></label>
+          <div class="registration__captcha" id="captchaGrid">
+            <div class="registration__captcha-item">
+              <i class="fa-regular fa-square" id="captcha1"></i>
+            </div>
+            <div class="registration__captcha-item ">
+              <i class="fa-regular fa-square" id="captcha2"></i>
+            </div>
+            <div class="registration__captcha-item ">
+              <i class="fa-regular fa-square" id="captcha3"></i>
+            </div>
+            <div class="registration__captcha-item">
+              <i class="fa-regular fa-square" id="captcha4"></i>
+            </div>
+            <div class="registration__captcha-item ">
+              <i class="fa-regular fa-square" id="captcha5"></i>
+            </div>
+            <div class="registration__captcha-item">
+              <i class="fa-regular fa-square" id="captcha6"></i>
+            </div>
+            <div class="registration__captcha-item ">
+              <i class="fa-regular fa-square" id="captcha7"></i>
+            </div>
+            <div class="registration__captcha-item">
+              <i class="fa-regular fa-square" id="captcha8"></i>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary registration__submit">Enviar inscripción</button>
+      </form>
+      <!--
+      <div class="pa-25">PA-25</div>
+      <div class="pa-50">PA-50</div>
+      <div class="pa-75">PA-75</div>
+      <div class="pa-100">PA-100</div>
+      <div class="pl-25">PL-25</div>
+      <div class="pl-50">PL-50</div>
+      <div class="pl-75">PL-75</div>
+      <div class="pl-100">PL-100</div>
+      <div class="pw-25">PW-25</div>
+      <div class="pw-50">PW-50</div>
+      <div class="pw-75">PW-75</div>
+      <div class="pw-100">PW-100</div>
+      <div class="pb-25">PB-25</div>
+      <div class="pb-50">PB-50</div>
+      <div class="pb-75">PB-75</div>
+      <div class="pb-100">PB-100</div>
+
+      <div class="pa--25">PA--25</div>
+      <div class="pa--50">PA--50</div>
+      <div class="pa--75">PA--75</div>
+      <div class="pa--100">PA--100</div>
+      <div class="pl--25">PL--25</div>
+      <div class="pl--50">PL--50</div>
+      <div class="pl--75">PL--75</div>
+      <div class="pl--100">PL--100</div>
+      <div class="pw--25">PW--25</div>
+      <div class="pw--50">PW--50</div>
+      <div class="pw--75">PW--75</div>
+      <div class="pw--100">PW--100</div>
+      <div class="pb--25">PB--25</div>
+      <div class="pb--50">PB--50</div>
+      <div class="pb--75">PB--75</div>
+      <div class="pb--100">PB--100</div>-->
+    </section>
+  </main>
+
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
+</html>

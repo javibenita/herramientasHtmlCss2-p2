@@ -6,20 +6,40 @@
 $font-family-serif: "Georgia", "Times New Roman", serif;*/
 
 $primary: #0b2f3a;
-$secondary: color.scale($primary, $lightness: +30%);
-$primary-bg: color.scale($primary, $lightness: +40%);
-$secondary-bg: color.scale($primary, $lightness: +70%);
-$tertiary-bg: color.scale($primary, $lightness: +90%);
+$secondary: red; /*color.scale($primary, $lightness: +30%);*/
+$primary-bg-1: color.scale(
+  color.scale($primary, $saturation: -0%),
+  $lightness: +0%
+);
+$primary-bg-2: color.scale(
+  color.scale($primary, $saturation: -50%),
+  $lightness: +50%
+);
+$primary-bg-3: color.scale(
+  color.scale($primary, $saturation: -80%),
+  $lightness: +80%
+);
+/*$secondary-bg-1: color.scale($secondary, $lightness: +0%);
+$secondary-bg-2: color.scale($secondary, $lightness: +40%);
+$secondary-bg-3: color.scale($secondary, $lightness: +80%);*/
+/*$tertiary-bg: color.scale($primary, $lightness: +90%);*/
 
 /*se sobreescriben los valores de bootstrap*/
-$body-bg: color.scale($primary, $lightness: +40%);
+/*$body-bg: $primary-bg-1;*/
 $body-color: $primary;
 
+/*navbar*/
+$navbar-light-color: $primary;
+$navbar-light-hover-color: $secondary;
+$nav-link-font-weight: 600;
+$navbar-nav-link-padding-x: 1rem;
+
+/*card*/
 $card-spacer-y: 1.5rem;
 $card-spacer-x: 1.5rem;
 /*$card-title-spacer-y: 0.5rem;*/
 $card-title-color: $primary;
-$card-subtitle-color: $secondary;
+$card-subtitle-color: color.scale($primary, $lightness: +30%);
 
 /*$font-size-base: 1rem;*/
 $font-family-sans-serif: "Arial", sans-serif;
@@ -48,3 +68,138 @@ $alt-text-color: color.scale($primary-color, $lightness: +80%);
 $link-color: $secondary-color;
 $link-hover-color: color.scale($link-color, $lightness: -40%);
 $font-stack: "Arial", sans-serif;*/
+
+.pa-25 {
+  background-color: color.scale($primary, $alpha: +25%);
+}
+.pa-50 {
+  background-color: color.scale($primary, $alpha: +50%);
+}
+.pa-75 {
+  background-color: color.scale($primary, $alpha: +75%);
+}
+.pa-100 {
+  background-color: color.scale($primary, $alpha: +100%);
+}
+.pl-25 {
+  background-color: color.scale($primary, $lightness: +25%);
+}
+.pl-50 {
+  background-color: color.scale($primary, $lightness: +50%);
+}
+.pl-75 {
+  background-color: color.scale($primary, $lightness: +75%);
+}
+.pl-100 {
+  background-color: color.scale($primary, $lightness: +100%);
+}
+.pw-25 {
+  background-color: color.scale($primary, $whiteness: +25%);
+}
+.pw-50 {
+  background-color: color.scale($primary, $whiteness: +50%);
+}
+.pw-75 {
+  background-color: color.scale($primary, $whiteness: +75%);
+}
+.pw-100 {
+  background-color: color.scale($primary, $whiteness: +100%);
+}
+.pb-25 {
+  background-color: color.scale($primary, $blackness: +25%);
+}
+.pb-50 {
+  background-color: color.scale($primary, $blackness: +50%);
+}
+.pb-75 {
+  background-color: color.scale($primary, $blackness: +75%);
+}
+.pb-100 {
+  background-color: color.scale($primary, $blackness: +100%);
+}
+
+.pa--25 {
+  background-color: color.scale($primary, $alpha: -25%);
+}
+.pa--50 {
+  background-color: color.scale($primary, $alpha: -50%);
+}
+.pa--75 {
+  background-color: color.scale($primary, $alpha: -75%);
+}
+.pa--100 {
+  background-color: color.scale($primary, $alpha: -100%);
+}
+.pl--25 {
+  background-color: color.scale($primary, $lightness: -25%);
+}
+.pl--50 {
+  background-color: color.scale($primary, $lightness: -50%);
+}
+.pl--75 {
+  background-color: color.scale($primary, $lightness: -75%);
+}
+.pl--100 {
+  background-color: color.scale($primary, $lightness: -100%);
+}
+
+.pw--25 {
+  background-color: color.scale($primary, $whiteness: -25%);
+}
+.pw--50 {
+  background-color: color.scale($primary, $whiteness: -50%);
+}
+.pw--75 {
+  background-color: color.scale($primary, $whiteness: -75%);
+}
+.pw--100 {
+  background-color: color.scale($primary, $whiteness: -100%);
+}
+
+.pb--25 {
+  background-color: color.scale($primary, $blackness: -25%);
+}
+.pb--50 {
+  background-color: color.scale($primary, $blackness: -50%);
+}
+.pb--75 {
+  background-color: color.scale($primary, $blackness: -75%);
+}
+.pb--100 {
+  background-color: color.scale($primary, $blackness: -100%);
+}
+
+/*.pc-50 {
+  background-color: color.scale($primary, $chroma: +50%);
+}
+.pc-100 {
+  background-color: color.scale($primary, $chroma: +100%);
+}
+
+.ps-50 {
+  background-color: color.scale($primary, $space: +50%);
+}
+.ps-100 {
+  background-color: color.scale($primary, $space: +100%);
+}
+
+.px-50 {
+  background-color: color.scale($primary, $x: +50%);
+}
+.px-100 {
+  background-color: color.scale($primary, $x: +100%);
+}
+
+.py-50 {
+  background-color: color.scale($primary, $y: +50%);
+}
+.py-100 {
+  background-color: color.scale($primary, $y: +100%);
+}
+
+.pz-50 {
+  background-color: color.scale($primary, $z: +50%);
+}
+.pz-100 {
+  background-color: color.scale($primary, $z: +100%);
+}*/

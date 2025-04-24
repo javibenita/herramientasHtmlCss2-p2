@@ -1,6 +1,6 @@
 .article {
-  background-color: $secondary-bg;
-  padding: 2rem 0 2rem;
+  /*background-color: $secondary-bg-1;*/
+  padding-bottom: 2rem;
 
   &__header {
     position: relative;
@@ -45,6 +45,17 @@
 
   &__intro {
     margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+
+    &-summary {
+      flex: 1 2 100%;
+      max-width: 100%;
+    }
+    &-body {
+      flex: 2 1 100%;
+      max-width: 100%;
+    }
 
     .text-large {
       font-size: 1.25rem;
@@ -56,12 +67,16 @@
   }
 
   &__list {
-    margin: 2rem 0;
+    margin: 1rem 0;
+    padding-top: 1rem;
+    border-top: 1px solid $primary;
+    border-bottom: 1px solid $primary;
 
     .article__steps {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      list-style: none;
     }
 
     .article__step {
@@ -80,8 +95,8 @@
         flex-shrink: 0;
         width: 2rem;
         height: 2rem;
-        background-color: #0d6efd;
-        color: #fff;
+        background-color: $primary;
+        color: $white;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -104,7 +119,7 @@
     margin-bottom: 2rem;
 
     .text-large {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
     }
   }
 

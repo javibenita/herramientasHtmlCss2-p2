@@ -1,0 +1,70 @@
+.registration {
+  padding-top: 2rem;
+
+  &__container {
+    /*max-width: 600px;*/
+  }
+
+  &__title {
+    /*font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #234f1e;*/
+    background-color: $primary;
+    color: $light;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: $primary;
+  }
+
+  &__form {
+    background-color: $primary-bg-3;
+    padding: 2rem;
+    border-radius: 1rem;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);*/
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__captcha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    container-type: inline-size;
+  }
+
+  &__captcha-item {
+    width: calc(25cqw - 0.3rem);
+    height: calc(25cqw - 0.3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $primary;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+  }
+
+  &__submit {
+    width: 100%;
+    font-weight: 600;
+  }
+}
+
+.captcha-color1 {
+  background-color: red;
+}
+.captcha-color2 {
+  background-color: green;
+}
+.captcha-color3 {
+  background-color: blue;
+}
+.captcha-color4 {
+  background-color: yellow;
+}
