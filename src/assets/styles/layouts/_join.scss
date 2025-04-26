@@ -1,70 +1,99 @@
-.registration {
-  padding-top: 2rem;
+@layer join.base, join.layout, join.components, join.utilities;
 
-  &__container {
-    /*max-width: 600px;*/
-  }
+@function item-size($cols, $gap) {
+  @return calc(#{100 / $cols}cqw - #{($cols - 1) / $cols} * #{$gap});
+}
 
-  &__title {
-    /*font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #234f1e;*/
-    background-color: $primary;
-    color: $light;
-    width: 100%;
-    text-align: center;
-  }
-
-  &__intro {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    color: $primary;
-  }
-
-  &__form {
-    background-color: $primary-bg-3;
-    padding: 2rem;
-    border-radius: 1rem;
-    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);*/
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  &__captcha {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    container-type: inline-size;
-  }
-
-  &__captcha-item {
-    width: calc(25cqw - 0.3rem);
-    height: calc(25cqw - 0.3rem);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid $primary;
-    border-radius: 0.5rem;
-    font-size: 2rem;
-  }
-
-  &__submit {
-    width: 100%;
-    font-weight: 600;
+@layer join.base {
+  .registration {
+    // resets locales o reglas generales
+    box-sizing: border-box;
   }
 }
 
-.captcha-color1 {
-  background-color: red;
+@layer join.layout {
+  .registration {
+    padding-top: 2rem;
+
+    &__container {
+      /*max-width: 600px;*/
+    }
+
+    &__form {
+      background-color: $primary-bg-3;
+      padding: 2rem;
+      border-radius: 1rem;
+      /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);*/
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
 }
-.captcha-color2 {
-  background-color: green;
+
+@layer join.components {
+  .registration {
+    &__title {
+      background-color: $primary;
+      color: $primary-alt;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__intro {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      color: $primary;
+    }
+
+    &__captcha {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      container-type: inline-size;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    &__captcha-item {
+      width: item-size(8, 0.4rem);
+      height: item-size(8, 0.4rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $primary;
+      border-radius: 0.5rem;
+      font-size: 2rem;
+
+      @container (max-width: 500px) {
+        width: item-size(4, 0.4rem);
+        height: item-size(4, 0.4rem);
+      }
+    }
+
+    &__captcha-alert {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__submit {
+      width: 100%;
+      font-weight: 600;
+    }
+  }
 }
-.captcha-color3 {
-  background-color: blue;
-}
-.captcha-color4 {
-  background-color: yellow;
+@layer join.utilities {
+  .captcha-color1 {
+    background-color: color(display-p3 1 0.08 0); /*ROJO*/
+  }
+  .captcha-color2 {
+    background-color: hwb(133 4% 36%); /*VERDE*/
+  }
+  .captcha-color3 {
+    background-color: lab(55 -5.17 -60); /*AZUL*/
+  }
+  .captcha-color4 {
+    background-color: lch(88% 121 86); /*AMARILLO*/
+  }
 }

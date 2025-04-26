@@ -1,11 +1,49 @@
 .article {
-  /*background-color: $secondary-bg-1;*/
   padding-bottom: 2rem;
 
-  &__header {
+  p:is(:first-child) {
+    font-size: 1.3rem;
+  }
+
+  section:has(ol) {
+    border-top: 1px solid $primary;
+    border-bottom: 1px solid $primary;
+  }
+
+  :is(blockquote) {
+    font-size: 1.3rem;
+    background-color: rgba($primary-bg-3, 0.5);
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 1rem 3rem;
+    font-style: italic;
+    position: relative;
+  }
+
+  :is(blockquote)::before,
+  :is(blockquote)::after {
+    font-family: serif;
+    font-size: 3rem;
+    color: $primary;
+    position: absolute;
+  }
+
+  :is(blockquote)::before {
+    content: "“";
+    left: 1.5rem;
+    top: 1.5rem;
+  }
+
+  :is(blockquote)::after {
+    content: "”";
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+
+  .article-header {
     position: relative;
 
-    .article__image {
+    &__image {
       display: block;
       width: 100%;
       height: auto;
@@ -13,13 +51,13 @@
       object-fit: cover;
     }
 
-    .article__overlay {
+    &__overlay {
       position: absolute;
       bottom: 2rem;
       left: 50%;
       transform: translate(-50%, 0%);
       background: rgba($primary, 0.5);
-      color: $light;
+      color: $primary-alt;
       padding: 1rem 2rem;
       border-radius: 0.5rem;
       text-align: center;
@@ -27,128 +65,99 @@
       white-space: nowrap;
     }
 
-    .article__title {
+    &__title {
       margin: 0;
       font-size: 2.5rem;
     }
 
-    .article__author {
+    &__author {
       font-size: 1rem;
       opacity: 0.8;
       position: absolute;
       margin: 0;
       bottom: 0.5rem;
       right: 1rem;
-      color: $light;
+      color: $primary-alt;
     }
   }
 
-  &__intro {
+  .article-intro {
     margin-top: 2rem;
     display: flex;
     gap: 1rem;
 
-    &-summary {
+    &__summary {
+      font-size: 1.3rem;
       flex: 1 2 100%;
       max-width: 100%;
     }
-    &-body {
+    &__body {
       flex: 2 1 100%;
       max-width: 100%;
     }
-
-    .text-large {
-      font-size: 1.25rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-    }
   }
 
-  &__list {
+  .article-steps {
     margin: 1rem 0;
     padding-top: 1rem;
-    border-top: 1px solid $primary;
-    border-bottom: 1px solid $primary;
 
-    .article__steps {
+    &__list {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
       list-style: none;
     }
 
-    .article__step {
+    &__step {
       /*display: flex;
       align-items: flex-start;
       gap: 1rem;*/
+    }
 
-      &-header {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 0.25rem;
-      }
+    &__step-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.25rem;
+    }
 
-      &-number {
-        flex-shrink: 0;
-        width: 2rem;
-        height: 2rem;
-        background-color: $primary;
-        color: $white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-      }
+    &__step-number {
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      background-color: $primary;
+      color: $primary-alt;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
 
-      &-title {
-        display: block;
-      }
+    &__step-title {
+      display: block;
+    }
 
-      &-text {
-        margin-left: calc(2rem + 1rem);
-        /*text-indent: 1rem;*/
-      }
+    &__step-text {
+      margin-left: calc(2rem + 1rem);
+      /*text-indent: 1rem;*/
     }
   }
 
-  &__content {
+  .article-content {
     margin-bottom: 2rem;
-
-    .text-large {
-      font-size: 1.3rem;
-    }
   }
 
-  &__figure {
+  .article-figure {
     margin-bottom: 2rem;
 
-    img {
+    &__img {
       width: 100%;
       height: auto;
       display: block;
     }
   }
 
-  &__footer {
-    p {
-      font-style: italic;
-    }
-  }
-
-  // Pseudoclases modernas
-  // Añade un borde si el bloque contiene un blockquote
-  &:has(blockquote) {
-    border-left: 4px solid #0d6efd;
-    padding-left: 1rem;
-  }
-
-  // Estilo común para encabezados dentro de la sección de contenido
-  .article__content :is(h2, h3, h4) {
-    color: #0d6efd;
-    margin-top: 1.5rem;
+  .article-footer {
   }
 }

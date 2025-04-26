@@ -2,11 +2,26 @@
   /*background-color: $secondary-background-color;*/
   margin-top: 1.5rem;
 
+  li a {
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
   &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    container-type: inline-size;
+    @media (max-width: 450px) {
+      flex-direction: column;
+      gap: 1rem;
+    }
   }
 
   &__text {
@@ -24,16 +39,13 @@
   &__nav-list {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    flex-direction: row;
+    padding: 0;
+    text-align: center;
 
-    li a {
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: $secondary;
-      }
+    @container (max-width: 600px) {
+      flex-direction: column;
     }
   }
 
@@ -42,14 +54,5 @@
     display: flex;
     gap: 0.5rem;
     font-size: 1.2rem;
-
-    li a {
-      text-decoration: none;
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: $secondary;
-      }
-    }
   }
 }
