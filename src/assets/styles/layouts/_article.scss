@@ -1,6 +1,138 @@
 .article {
   padding-bottom: 2rem;
 
+  .article-header {
+    position: relative;
+
+    &__image {
+      display: block;
+      width: 100%;
+      height: auto;
+      min-height: 250px;
+      max-height: 50vh;
+      object-fit: cover;
+    }
+
+    &__overlay {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      background: rgba($primary, 0.5);
+      color: $primary-alt;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      max-width: 90%;
+      container-type: inline-size;
+    }
+
+    &__title {
+      margin: 0;
+      @container (max-width: 500px) {
+        font-size: calc(1.2rem + 1.5vw);
+        line-height: 1.5;
+      }
+    }
+
+    &__author {
+      font-size: 1rem;
+      opacity: 0.8;
+      position: absolute;
+      margin: 0;
+      bottom: 0.5rem;
+      right: 1rem;
+      color: $primary-alt;
+    }
+  }
+
+  .article-container {
+    container-type: inline-size;
+  }
+
+  .article-intro {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    @container (max-width: 500px) {
+      flex-direction: column;
+    }
+
+    &__summary {
+      flex: 1 2 100%;
+      max-width: 100%;
+      @container (max-width: 500px) {
+        flex: 0 0 auto;
+        width: 100%;
+      }
+    }
+    &__body {
+      flex: 2 1 100%;
+      max-width: 100%;
+    }
+  }
+
+  .article-steps {
+    margin: 1rem 0;
+    padding-top: 1rem;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      list-style: none;
+      @container (max-width: 500px) {
+        padding-left: 1rem;
+      }
+    }
+
+    &__step-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    &__step-number {
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      background-color: $primary;
+      color: $primary-alt;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    &__step-title {
+      display: block;
+    }
+
+    &__step-text {
+      margin-left: calc(2rem + 1rem);
+    }
+  }
+
+  .article-content {
+    margin-bottom: 2rem;
+  }
+
+  .article-figure {
+    margin-bottom: 2rem;
+
+    &__img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 50vh;
+      object-fit: contain;
+    }
+  }
+
+  /* utilidades para usar :is y :has */
+
   p:is(:first-child) {
     font-size: 1.3rem;
   }
@@ -38,126 +170,5 @@
     content: "”";
     right: 1.5rem;
     top: 1.5rem;
-  }
-
-  .article-header {
-    position: relative;
-
-    &__image {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: 50vh;
-      object-fit: cover;
-    }
-
-    &__overlay {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translate(-50%, 0%);
-      background: rgba($primary, 0.5);
-      color: $primary-alt;
-      padding: 1rem 2rem;
-      border-radius: 0.5rem;
-      text-align: center;
-      max-width: 90%;
-      white-space: nowrap;
-    }
-
-    &__title {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    &__author {
-      font-size: 1rem;
-      opacity: 0.8;
-      position: absolute;
-      margin: 0;
-      bottom: 0.5rem;
-      right: 1rem;
-      color: $primary-alt;
-    }
-  }
-
-  .article-intro {
-    margin-top: 2rem;
-    display: flex;
-    gap: 1rem;
-
-    &__summary {
-      font-size: 1.3rem;
-      flex: 1 2 100%;
-      max-width: 100%;
-    }
-    &__body {
-      flex: 2 1 100%;
-      max-width: 100%;
-    }
-  }
-
-  .article-steps {
-    margin: 1rem 0;
-    padding-top: 1rem;
-
-    &__list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      list-style: none;
-    }
-
-    &__step {
-      /*display: flex;
-      align-items: flex-start;
-      gap: 1rem;*/
-    }
-
-    &__step-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 0.25rem;
-    }
-
-    &__step-number {
-      flex-shrink: 0;
-      width: 2rem;
-      height: 2rem;
-      background-color: $primary;
-      color: $primary-alt;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
-
-    &__step-title {
-      display: block;
-    }
-
-    &__step-text {
-      margin-left: calc(2rem + 1rem);
-      /*text-indent: 1rem;*/
-    }
-  }
-
-  .article-content {
-    margin-bottom: 2rem;
-  }
-
-  .article-figure {
-    margin-bottom: 2rem;
-
-    &__img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-  }
-
-  .article-footer {
   }
 }

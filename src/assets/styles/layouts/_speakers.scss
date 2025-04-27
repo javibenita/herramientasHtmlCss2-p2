@@ -9,16 +9,13 @@
 
 @layer speakers.layout {
   .speakers {
-    /*background-color: $secondary-bg-1;*/
-    padding: 2rem 0 2rem;
+    padding-top: 2rem;
 
     &__header {
       color: $primary-alt;
     }
 
     &__title {
-      /*font-size: 2.5rem;
-    font-weight: bold;*/
       background-color: $primary;
       width: 100%;
       text-align: center;
@@ -29,10 +26,6 @@
     }
 
     &__description {
-      /*font-size: 1.125rem;
-    color: #555;
-    max-width: 700px;
-    margin: 0 auto;*/
       background-color: $primary-bg-3;
       text-align: center;
       border-radius: 15px;
@@ -44,46 +37,37 @@
       flex-wrap: wrap;
       gap: 2rem;
       justify-content: center;
+      container-type: inline-size;
     }
   }
 }
 
 @layer speakers.components {
   .speaker-card {
-    /*flex: 1 1 calc(25% - 2rem);*/
-    max-width: calc(25% - 2rem);
-    /*display: flex;*/
-    /*flex-direction: column;*/
     background-color: $primary-bg-3;
-    /*border: 1px solid #ddd;*/
-    /*border-radius: 0.5rem;*/
-    /*overflow: hidden;*/
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);*/
-    /*line-height: 1.5;*/
+    width: item-size(4, 2rem);
+    align-items: center;
+    container-type: inline-size;
 
     /*TODO definirlos conforme a los saltos de boostrap, o mejor refiriendo al tamaño del contenedor en lugar del viewport */
     @media (max-width: 1200px) {
-      /*flex: 1 1 calc(50% - 2rem);*/
-      max-width: calc(33.333% - 2rem);
+      width: item-size(3, 2rem);
     }
     @media (max-width: 992px) {
-      /*flex: 1 1 calc(50% - 2rem);*/
-      max-width: calc(50% - 2rem);
+      width: item-size(2, 2rem);
     }
 
     @media (max-width: 576px) {
-      /*flex: 1 1 100%;*/
-      max-width: 100%;
+      width: 100%;
     }
 
     &__photo {
-      /*width: 100%;*/
       height: 260px;
       object-fit: cover;
-    }
-
-    &__content {
-      /*padding: 1.5rem;*/
+      @container (min-width: 400px) {
+        /* para evitar que se estire la imagen en tarjetas grandes */
+        max-width: 350px;
+      }
     }
 
     &__name {
@@ -93,13 +77,7 @@
 
     &__position {
       font-style: italic;
-      /*color: $secondary;*/
       margin-bottom: 1rem;
-    }
-
-    &__bio {
-      /*font-size: 0.95rem;*/
-      /*line-height: 1.5;*/
     }
   }
 }

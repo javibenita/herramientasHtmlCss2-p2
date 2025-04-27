@@ -8,6 +8,7 @@
     gap: 1rem;
     align-items: center;
     justify-content: space-between;
+    container-type: inline-size;
   }
   &__title,
   &__subtitle {
@@ -18,35 +19,78 @@
   }
 
   &__idea {
-    width: calc(20% - 1rem);
+    /* width: 25% para cada una de las 4 ideas - 4 gaps - las flechas centrales*/
+    width: calc(25% - (4rem / 4) - (3rem / 4));
     text-align: center;
-    font-size: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     border: 2px solid;
     border-radius: 15px;
     padding: 0.5rem;
+    container-type: inline-size;
+
+    @container (max-width: 600px) {
+      width: calc(50% - (1rem / 2));
+    }
+  }
+  &__idea-name {
+    font-size: 1.5rem;
+    @container (max-width: 110px) {
+      font-size: 1.3rem;
+    }
+    @container (max-width: 100px) {
+      font-size: 1.3rem;
+    }
+    @container (max-width: 90px) {
+      font-size: 1rem;
+    }
   }
   &__idea-i {
     font-size: 3rem;
+    @container (max-width: 100px) {
+      font-size: 2.5rem;
+    }
+    @container (max-width: 90px) {
+      font-size: 2rem;
+    }
+  }
+  &__centeridea {
+    font-size: 3rem;
+    @container (max-width: 600px) {
+      display: none;
+    }
   }
   &__image {
     display: block;
-    width: calc(50% - 1rem);
+    width: calc(50% - (1rem / 2));
     object-fit: cover;
     border-radius: 10px;
     max-height: 60vh;
+    @container (max-width: 600px) {
+      max-height: 33vh;
+      width: 100%;
+    }
   }
-  &__text {
+  &__text-container {
     display: block;
-    width: calc(50% - 1rem);
+    width: calc(50% - (1rem / 2));
     background-color: $primary-bg-3;
     border-radius: 15px;
     padding: 1rem 1rem 3rem 1rem;
     max-height: 60vh;
     overflow: hidden;
     position: relative;
+    container-type: inline-size;
+    @container (max-width: 600px) {
+      width: 100%;
+    }
+  }
+  &__text {
+    font-size: 1rem;
+    @container (max-width: 300px) {
+      font-size: 0.8rem;
+    }
   }
   &__join {
     width: calc(100% - 2rem);
@@ -87,7 +131,7 @@
         grid-row: 5;
       }
 
-      &__text {
+      &__text-container {
         grid-column: 6 / 8;
         grid-row: 2 / -1;
         width: 100%;

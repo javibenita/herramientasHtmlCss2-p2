@@ -5,7 +5,7 @@
   "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;*/
 
-$primary: #0b2f3a;
+$primary: #12495a; /*0b2f3a*/
 $primary-alt: white;
 $secondary: red; /*color.scale($primary, $lightness: +30%);*/
 $primary-bg-1: color.scale(
@@ -25,7 +25,7 @@ $primary-bg-3: color.scale(
 /*$body-bg: $primary-bg-1;*/
 $body-color: $primary;
 $font-family-sans-serif: "Verdana", "Arial", sans-serif;
-$headings-line-height: 1.5;
+$headings-line-height: 1.8;
 
 /*button*/
 $btn-font-weight: 600;
@@ -45,3 +45,8 @@ $card-bg: $primary-bg-3;
 
 /*alert*/
 $alert-border-radius: 1rem;
+
+/*funcion utilidad*/
+@function item-size($cols, $gap) {
+  @return calc(#{100 / $cols}cqw - #{($cols - 1) / $cols} * #{$gap});
+}

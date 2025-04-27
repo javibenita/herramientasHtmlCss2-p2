@@ -1,9 +1,5 @@
 @layer join.base, join.layout, join.components, join.utilities;
 
-@function item-size($cols, $gap) {
-  @return calc(#{100 / $cols}cqw - #{($cols - 1) / $cols} * #{$gap});
-}
-
 @layer join.base {
   .registration {
     // resets locales o reglas generales
@@ -64,6 +60,7 @@
       border: 2px solid $primary;
       border-radius: 0.5rem;
       font-size: 2rem;
+      cursor: pointer;
 
       @container (max-width: 500px) {
         width: item-size(4, 0.4rem);
