@@ -119,8 +119,8 @@ import * as bootstrap from "bootstrap";
           // Mostrar mensaje de éxito
           const captchaSuccess = document.getElementById("captchaSuccess");
           if (captchaSuccess) {
-            e.preventDefault();
             captchaSuccess.classList.remove("d-none");
+            //e.preventDefault(); dejo que se envíe el formulario, y que lo interprete netlify
           }
         }
       });
