@@ -1,13 +1,13 @@
-@layer speakers.base, speakers.layout, speakers.components;
+@layer base, layout, components;
 
-@layer speakers.base {
+@layer base {
   .speakers {
     // resets locales o reglas generales
     box-sizing: border-box;
   }
 }
 
-@layer speakers.layout {
+@layer layout {
   .speakers {
     padding-top: 2rem;
 
@@ -16,9 +16,9 @@
     }
 
     &__title {
-      background-color: $primary;
       width: 100%;
       text-align: center;
+      background-color: $primary;
     }
 
     &__intro {
@@ -26,10 +26,10 @@
     }
 
     &__description {
-      background-color: $primary-bg-3;
-      text-align: center;
-      border-radius: 15px;
       padding: 1rem;
+      text-align: center;
+      background-color: $primary-bg-3;
+      border-radius: 15px;
     }
 
     &__grid {
@@ -42,14 +42,13 @@
   }
 }
 
-@layer speakers.components {
+@layer components {
   .speaker-card {
-    background-color: $primary-bg-3;
-    width: item-size(4, 2rem);
     align-items: center;
+    width: item-size(4, 2rem);
+    background-color: $primary-bg-3;
     container-type: inline-size;
 
-    /*TODO definirlos conforme a los saltos de boostrap, o mejor refiriendo al tamaño del contenedor en lugar del viewport */
     @media (max-width: 1200px) {
       width: item-size(3, 2rem);
     }
@@ -76,8 +75,8 @@
     }
 
     &__position {
-      font-style: italic;
       margin-bottom: 1rem;
+      font-style: italic;
     }
   }
 }

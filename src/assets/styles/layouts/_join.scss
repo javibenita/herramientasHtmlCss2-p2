@@ -1,44 +1,39 @@
-@layer join.base, join.layout, join.components, join.utilities;
+@layer base, layout, components, utilities;
 
-@layer join.base {
+@layer base {
   .registration {
     // resets locales o reglas generales
     box-sizing: border-box;
   }
 }
 
-@layer join.layout {
+@layer layout {
   .registration {
     padding-top: 2rem;
 
-    &__container {
-      /*max-width: 600px;*/
-    }
-
     &__form {
-      background-color: $primary-bg-3;
-      padding: 2rem;
-      border-radius: 1rem;
-      /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);*/
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      padding: 2rem;
+      background-color: $primary-bg-3;
+      border-radius: 1rem;
     }
   }
 }
 
-@layer join.components {
+@layer components {
   .registration {
     &__title {
-      background-color: $primary;
-      color: $primary-alt;
       width: 100%;
+      color: $primary-alt;
       text-align: center;
+      background-color: $primary;
     }
 
     &__intro {
-      font-size: 1rem;
       margin-bottom: 2rem;
+      font-size: 1rem;
       color: $primary;
     }
 
@@ -46,21 +41,21 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.4rem;
-      container-type: inline-size;
       max-width: 800px;
       margin: auto;
+      container-type: inline-size;
     }
 
     &__captcha-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: item-size(8, 0.4rem);
       height: item-size(8, 0.4rem);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid $primary;
-      border-radius: 0.5rem;
       font-size: 2rem;
       cursor: pointer;
+      border: 2px solid $primary;
+      border-radius: 0.5rem;
 
       @container (max-width: 500px) {
         width: item-size(4, 0.4rem);
@@ -70,8 +65,8 @@
 
     &__captcha-alert {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
 
     &__submit {
@@ -80,7 +75,7 @@
     }
   }
 }
-@layer join.utilities {
+@layer utilities {
   .captcha-color1 {
     background-color: color(display-p3 1 0.08 0); /*ROJO*/
   }

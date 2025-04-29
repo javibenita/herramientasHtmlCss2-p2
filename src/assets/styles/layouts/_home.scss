@@ -1,6 +1,6 @@
 .poster {
-  background-color: $primary-bg-2;
   padding: 2rem 0 1rem;
+  background-color: $primary-bg-2;
 
   &__container {
     display: flex;
@@ -12,22 +12,22 @@
   }
   &__title,
   &__subtitle {
-    background-color: $primary;
-    color: $primary-alt;
     width: 100%;
+    color: $primary-alt;
     text-align: center;
+    background-color: $primary;
   }
 
   &__idea {
-    /* width: 25% para cada una de las 4 ideas - 4 gaps - las flechas centrales*/
-    width: calc(25% - (4rem / 4) - (3rem / 4));
-    text-align: center;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    /* width: 25% para cada una de las 4 ideas - 4 gaps - las flechas centrales*/
+    width: calc(25% - (4rem / 4) - (3rem / 4));
+    padding: 0.5rem;
+    text-align: center;
     border: 2px solid;
     border-radius: 15px;
-    padding: 0.5rem;
     container-type: inline-size;
 
     @container (max-width: 600px) {
@@ -64,23 +64,23 @@
   &__image {
     display: block;
     width: calc(50% - (1rem / 2));
+    max-height: 60vh;
     object-fit: cover;
     border-radius: 10px;
-    max-height: 60vh;
     @container (max-width: 600px) {
-      max-height: 33vh;
       width: 100%;
+      max-height: 40vh;
     }
   }
   &__text-container {
+    position: relative;
     display: block;
     width: calc(50% - (1rem / 2));
+    max-height: 60vh;
+    padding: 1rem 1rem 3rem;
+    overflow: hidden;
     background-color: $primary-bg-3;
     border-radius: 15px;
-    padding: 1rem 1rem 3rem 1rem;
-    max-height: 60vh;
-    overflow: hidden;
-    position: relative;
     container-type: inline-size;
     @container (max-width: 600px) {
       width: 100%;
@@ -93,11 +93,11 @@
     }
   }
   &__join {
-    width: calc(100% - 2rem);
-    background-color: $primary-bg-3;
     position: absolute;
     bottom: 1rem;
+    width: calc(100% - 2rem);
     text-align: right;
+    background-color: $primary-bg-3;
   }
 }
 
@@ -106,67 +106,67 @@
     .poster {
       &__container {
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
         grid-template-rows: repeat(5, auto);
+        grid-template-columns: repeat(7, 1fr);
         gap: 1rem;
         align-items: center;
         overflow: hidden;
       }
 
       &__image {
-        grid-column: 1 / 3;
         grid-row: 1 / 5;
-        max-width: 100%;
+        grid-column: 1 / 3;
         width: 100%;
+        max-width: 100%;
         height: 100%;
       }
 
       &__title {
-        grid-column: 3 / -1;
         grid-row: 1;
+        grid-column: 3 / -1;
       }
 
       &__subtitle {
-        grid-column: 1 / 6;
         grid-row: 5;
+        grid-column: 1 / 6;
       }
 
       &__text-container {
-        grid-column: 6 / 8;
         grid-row: 2 / -1;
+        grid-column: 6 / 8;
         width: 100%;
         height: 100%;
       }
 
       &__idea {
         display: flex;
-        max-width: 100%;
         width: 100%;
+        max-width: 100%;
       }
 
       &__topidea {
-        grid-column: 4;
         grid-row: 2;
+        grid-column: 4;
       }
 
       &__rightidea {
-        grid-column: 5;
         grid-row: 3;
+        grid-column: 5;
       }
 
       &__bottomidea {
-        grid-column: 4;
         grid-row: 4;
+        grid-column: 4;
       }
 
       &__leftidea {
-        grid-column: 3;
         grid-row: 3;
+        grid-column: 3;
       }
 
       &__centeridea {
-        grid-column: 4;
         grid-row: 3;
+        grid-column: 4;
         font-size: 4rem;
         text-align: center;
       }

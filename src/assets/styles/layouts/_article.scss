@@ -17,13 +17,13 @@
       position: absolute;
       bottom: 2rem;
       left: 50%;
-      transform: translate(-50%, 0%);
-      background: rgba($primary, 0.5);
-      color: $primary-alt;
-      padding: 1rem 2rem;
-      border-radius: 0.5rem;
-      text-align: center;
       max-width: 90%;
+      padding: 1rem 2rem;
+      color: $primary-alt;
+      text-align: center;
+      background: rgba($primary, 0.5);
+      border-radius: 0.5rem;
+      transform: translate(-50%, 0%);
       container-type: inline-size;
     }
 
@@ -36,13 +36,13 @@
     }
 
     &__author {
-      font-size: 1rem;
-      opacity: 0.8;
       position: absolute;
-      margin: 0;
-      bottom: 0.5rem;
       right: 1rem;
+      bottom: 0.5rem;
+      margin: 0;
+      font-size: 1rem;
       color: $primary-alt;
+      opacity: 0.8;
     }
   }
 
@@ -51,9 +51,9 @@
   }
 
   .article-intro {
-    margin-top: 2rem;
     display: flex;
     gap: 1rem;
+    margin-top: 2rem;
     @container (max-width: 500px) {
       flex-direction: column;
     }
@@ -73,8 +73,8 @@
   }
 
   .article-steps {
-    margin: 1rem 0;
     padding-top: 1rem;
+    margin: 1rem 0;
 
     &__list {
       display: flex;
@@ -88,22 +88,22 @@
 
     &__step-header {
       display: flex;
-      align-items: center;
       gap: 1rem;
+      align-items: center;
       margin-bottom: 0.25rem;
     }
 
     &__step-number {
-      flex-shrink: 0;
-      width: 2rem;
-      height: 2rem;
-      background-color: $primary;
-      color: $primary-alt;
-      border-radius: 50%;
       display: flex;
+      flex-shrink: 0;
       align-items: center;
       justify-content: center;
+      width: 2rem;
+      height: 2rem;
       font-weight: bold;
+      color: $primary-alt;
+      background-color: $primary;
+      border-radius: 50%;
     }
 
     &__step-title {
@@ -123,9 +123,9 @@
     margin-bottom: 2rem;
 
     &__img {
+      display: block;
       width: 100%;
       height: auto;
-      display: block;
       max-height: 50vh;
       object-fit: contain;
     }
@@ -143,32 +143,32 @@
   }
 
   :is(blockquote) {
+    position: relative;
+    padding: 1rem 3rem;
     font-size: 1.3rem;
+    font-style: italic;
+    text-align: center;
     background-color: rgba($primary-bg-3, 0.5);
     border-radius: 0.5rem;
-    text-align: center;
-    padding: 1rem 3rem;
-    font-style: italic;
-    position: relative;
   }
 
   :is(blockquote)::before,
   :is(blockquote)::after {
+    position: absolute;
     font-family: serif;
     font-size: 3rem;
     color: $primary;
-    position: absolute;
   }
 
   :is(blockquote)::before {
-    content: "“";
-    left: 1.5rem;
     top: 1.5rem;
+    left: 1.5rem;
+    content: "“";
   }
 
   :is(blockquote)::after {
-    content: "”";
-    right: 1.5rem;
     top: 1.5rem;
+    right: 1.5rem;
+    content: "”";
   }
 }

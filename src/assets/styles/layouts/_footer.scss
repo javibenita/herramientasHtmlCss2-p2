@@ -3,8 +3,8 @@
   margin-top: 1.5rem;
 
   li a {
-    text-decoration: none;
     font-weight: 600;
+    text-decoration: none;
     transition: color 0.3s ease;
 
     &:hover {
@@ -15,8 +15,8 @@
   &__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     container-type: inline-size;
     @media (max-width: 450px) {
       flex-direction: column;
@@ -26,10 +26,10 @@
 
   &__text {
     width: 100%;
-    text-align: center;
     padding: 1rem;
-    border-bottom: 1px solid $primary;
     padding-bottom: 2rem;
+    text-align: center;
+    border-bottom: 1px solid $primary;
   }
 
   &__logo-img {
@@ -37,12 +37,12 @@
   }
 
   &__nav-list {
-    list-style: none;
     display: flex;
-    gap: 1rem;
     flex-direction: row;
+    gap: 1rem;
     padding: 0;
     text-align: center;
+    list-style: none;
 
     @container (max-width: 600px) {
       flex-direction: column;
@@ -50,9 +50,9 @@
   }
 
   &__social-list {
-    list-style: none;
     display: flex;
     gap: 0.5rem;
     font-size: 1.2rem;
+    list-style: none;
   }
 }

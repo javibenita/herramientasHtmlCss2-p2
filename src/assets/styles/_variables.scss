@@ -10,15 +10,15 @@ $primary-alt: white;
 $secondary: red; /*color.scale($primary, $lightness: +30%);*/
 $primary-bg-1: color.scale(
   color.scale($primary, $saturation: -0%),
-  $lightness: +0%
+  $lightness: 0%
 );
 $primary-bg-2: color.scale(
   color.scale($primary, $saturation: -50%),
-  $lightness: +50%
+  $lightness: 50%
 );
 $primary-bg-3: color.scale(
   color.scale($primary, $saturation: -90%),
-  $lightness: +90%
+  $lightness: 90%
 );
 
 /*se sobreescriben los valores de bootstrap*/
@@ -40,7 +40,7 @@ $navbar-nav-link-padding-x: 1rem;
 $card-spacer-y: 1.5rem;
 $card-spacer-x: 1.5rem;
 $card-title-color: $primary;
-$card-subtitle-color: color.scale($primary, $lightness: +30%);
+$card-subtitle-color: color.scale($primary, $lightness: 30%);
 $card-bg: $primary-bg-3;
 
 /*alert*/
