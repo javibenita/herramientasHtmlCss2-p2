@@ -61,6 +61,17 @@ import * as bootstrap from "bootstrap";
   }
 
   document.addEventListener("DOMContentLoaded", () => {
+    // Marcar pagina como activa
+    const path = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach((link) => {
+      const href = link.getAttribute("href");
+      if (href === path || (href === "index.html" && path === "")) {
+        link.classList.add("active");
+      }
+    });
+
     // Inicializamos el captcha al cargar la página
     const captchaGrid = document.getElementById("captchaGrid");
     if (captchaGrid) {

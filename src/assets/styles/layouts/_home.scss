@@ -142,26 +142,22 @@
         display: flex;
         width: 100%;
         max-width: 100%;
-      }
-
-      &__topidea {
-        grid-row: 2;
-        grid-column: 4;
-      }
-
-      &__rightidea {
-        grid-row: 3;
-        grid-column: 5;
-      }
-
-      &__bottomidea {
-        grid-row: 4;
-        grid-column: 4;
-      }
-
-      &__leftidea {
-        grid-row: 3;
-        grid-column: 3;
+        &:has(.fa-brain) {
+          grid-row: 2;
+          grid-column: 4;
+        }
+        &:has(.fa-minimize) {
+          grid-row: 3;
+          grid-column: 5;
+        }
+        &:has(.fa-people-arrows) {
+          grid-row: 4;
+          grid-column: 4;
+        }
+        &:has(.fa-recycle) {
+          grid-row: 3;
+          grid-column: 3;
+        }
       }
 
       &__centeridea {

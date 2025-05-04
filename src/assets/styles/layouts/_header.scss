@@ -25,4 +25,12 @@
       background: linear-gradient(135deg, $primary-bg-3, $primary-bg-2);
     }
   }
+  &__link {
+    &:hover {
+      color: $secondary;
+    }
+    &:is(.active) {
+      color: $secondary;
+    }
+  }
 }

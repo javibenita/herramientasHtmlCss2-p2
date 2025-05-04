@@ -50,6 +50,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      /* width y height equivalentes a repoartir entre 8 el espacio del contenedor, teniendo en cuenta el gap */
+      /* width: calc(#{100 / $cols}cqw - #{($cols - 1) / $cols} * #{$gap})*/
       width: item-size(8, 0.4rem);
       height: item-size(8, 0.4rem);
       font-size: 2rem;
